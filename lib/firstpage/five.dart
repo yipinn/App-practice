@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; //註冊頁面
 import 'package:qooname/firstpage/seven.dart';
 import 'package:qooname/firstpage/six.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -41,11 +41,7 @@ class _fiveState extends State<five> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(''),
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-        ),
+     
         body: Center(
             child: SingleChildScrollView(child: Column(
           children: [
@@ -288,7 +284,7 @@ class _fiveState extends State<five> {
                Navigator.push(
          context,
            MaterialPageRoute( //登入
-               builder: (context) =>seven()
+               builder: (context) =>seven(text: '',)
                ),
                  );},
             child: Text(
