@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:qlevar_router/qlevar_router.dart';
 
 
 class CounterController extends GetxController {  //計數器
@@ -104,7 +105,18 @@ class button3 extends StatelessWidget {
            ),Container(padding: EdgeInsets.only(left: 20),child:  Obx(() => Text(
                   ' ${controller1.sum}',
                   style: TextStyle(fontSize: 24),
-                )),)],)
+                )),)],),SizedBox(height: 200,),
+               GestureDetector(
+  onTap: () {
+    QR.to('/bttton4'); // 假设这是导航到页面6的正确方法
+  },
+  child: Container(
+    width: 150,
+    height: 100,
+    color: Colors.red,
+    // 可以添加更多的子组件或装饰
+  ),
+)
         ],
       ),
     );

@@ -17,7 +17,7 @@ class _FirstPageStateState extends State<firstpagestate>
   final ValueNotifier<double> totalValNotifier = ValueNotifier(0);
   double start = 0.0;
   double end = 0.25;
- 
+
   @override
   void initState() {
     super.initState();
@@ -121,12 +121,14 @@ class _FirstPageStateState extends State<firstpagestate>
                           size: 20,
                           color: Colors.white,
                         ),
-                      ),  GestureDetector(
-  onTap: () {
-    
-    NavigationHelper.pushWithAnimation(context, second(text: '二頁'));
-  },
-child: Container(  height: 55,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          NavigationHelper.pushWithAnimation(
+                              context, second(text: '二頁'));
+                        },
+                        child: Container(
+                          height: 55,
                           width: 52,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 163, 187, 237),
@@ -134,9 +136,9 @@ child: Container(  height: 55,
                           child: Icon(
                             Icons.chevron_right,
                             color: Colors.white,
-                          ),),
-),
-                     
+                          ),
+                        ),
+                      ),
                     ],
                   ))),
         ],

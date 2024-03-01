@@ -123,12 +123,13 @@ class _thirdState extends State<third> with SingleTickerProviderStateMixin {
                           value: value,
                         ),
                       ),
-                     GestureDetector(
-  onTap: () {
-    
-    NavigationHelper.pushWithAnimation(context, four(text: '二頁'));
-  },
-child: Container(  height: 55,
+                      GestureDetector(
+                        onTap: () {
+                          NavigationHelper.pushWithAnimation(
+                              context, four(text: '二頁'));
+                        },
+                        child: Container(
+                          height: 55,
                           width: 52,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 163, 187, 237),
@@ -136,8 +137,10 @@ child: Container(  height: 55,
                           child: Icon(
                             Icons.chevron_right,
                             color: Colors.white,
-                          ),),
-),],
+                          ),
+                        ),
+                      ),
+                    ],
                   )))
         ]));
   }

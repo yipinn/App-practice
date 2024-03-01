@@ -1,6 +1,11 @@
+
+
 import 'package:flutter/material.dart';
 
-class NavigationHelper {
+
+
+
+class NavigationHelper {    //button 導航路由 左往右滑動畫
 
 static void pushWithAnimation(BuildContext context, Widget page) {
 
@@ -39,3 +44,5 @@ child: child,
 }
 
 }
+
+
