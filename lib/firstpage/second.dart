@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qooname/firstpage/third.dart';
+import 'package:qooname/route/route.dart';
 
 
 class second extends StatefulWidget {
@@ -126,38 +127,21 @@ class _secondState extends State<second> with SingleTickerProviderStateMixin {
                           value: value,
                         ),
                       ),
-                      GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                PageRouteBuilder(
-                                    transitionDuration:
-                                        Duration(milliseconds: 500),
-                                    pageBuilder: (_, animation, __) =>
-                                        third(text: '說明'),
-                                    transitionsBuilder:
-                                        (_, animation, __, child) {
-                                      return SlideTransition(
-                                          position: Tween<Offset>(
-                                                  begin: Offset(1.0, 0.0),
-                                                  end: Offset(0.0, 0.0))
-                                              .animate(animation),
-                                          child: child);
-                                    }));
-                        },
-                        child: Container(
-                            height: 55,
-                            width: 52,
-                            decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 163, 187, 237),
-                                shape: BoxShape.circle),
-                               child: Icon(
-                          Icons.chevron_right,
-                          size: 20,
-                          color: Colors.white,
-                        ),
-                          ),
-                  )],
+                       GestureDetector(
+  onTap: () {
+    
+    NavigationHelper.pushWithAnimation(context,third(text: '二頁'));
+  },
+child: Container(  height: 55,
+                          width: 52,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 163, 187, 237),
+                              shape: BoxShape.circle),
+                          child: Icon(
+                            Icons.chevron_right,
+                            color: Colors.white,
+                          ),),
+),],
                   )))
         ]),);
   }

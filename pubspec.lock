@@ -208,6 +208,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  qlevar_router:
+    dependency: "direct main"
+    description:
+      name: qlevar_router
+      sha256: "22fd556e143d931d44537285be76029fbf62c387c9c92c01f8c5899f1651a4bd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.10.2"
   shared_preferences:
     dependency: "direct main"
     description:

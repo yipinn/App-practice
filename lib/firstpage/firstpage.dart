@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:qooname/firstpage/second.dart';
+import 'package:qooname/route/route.dart';
 
 class firstpagestate extends StatefulWidget {
   const firstpagestate({Key? key, required String text}) : super(key: key);
@@ -121,27 +121,12 @@ class _FirstPageStateState extends State<firstpagestate>
                           size: 20,
                           color: Colors.white,
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              PageRouteBuilder(
-                                transitionDuration: Duration(milliseconds: 500),
-                                pageBuilder: (_, animation, __) =>
-                                    second(text: '說明'),
-                                transitionsBuilder: (_, animation, __, child) {
-                                  return SlideTransition(
-                                      position: Tween<Offset>(
-                                              begin: Offset(1.0, 0.0),
-                                              end: Offset(0.0, 0.0))
-                                          .animate(animation),
-                                      child: child);
-                                },
-                              ));
-                        },
-                        child: Container(
-                          height: 55,
+                      ),  GestureDetector(
+  onTap: () {
+    
+    NavigationHelper.pushWithAnimation(context, second(text: '二頁'));
+  },
+child: Container(  height: 55,
                           width: 52,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 163, 187, 237),
@@ -149,11 +134,11 @@ class _FirstPageStateState extends State<firstpagestate>
                           child: Icon(
                             Icons.chevron_right,
                             color: Colors.white,
-                          ),
-                        ),
-                      ),
+                          ),),
+),
+                     
                     ],
-                  )))
+                  ))),
         ],
       ),
     );

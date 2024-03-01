@@ -1,13 +1,13 @@
 
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';  //登入頁面
 import 'package:qooname/firstpage/firstpage.dart';
 import 'package:qooname/firstpage/five.dart';
 
 
 
 class seven extends StatefulWidget {
-  const seven({super.key});
+  const seven({super.key, required String text});
 
   @override
   State<seven> createState() => _sevenState();
